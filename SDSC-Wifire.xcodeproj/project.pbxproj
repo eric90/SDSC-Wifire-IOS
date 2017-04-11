@@ -13,6 +13,8 @@
 		574FE5791E9CB7AB0045D580 /* SDSC_Wifire.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 574FE5771E9CB7AB0045D580 /* SDSC_Wifire.xcdatamodeld */; };
 		574FE57B1E9CB7AB0045D580 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 574FE57A1E9CB7AB0045D580 /* Assets.xcassets */; };
 		574FE57E1E9CB7AB0045D580 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 574FE57C1E9CB7AB0045D580 /* LaunchScreen.storyboard */; };
+		574FE5871E9D56B80045D580 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574FE5861E9D56B80045D580 /* Post.swift */; };
+		574FE58A1E9D6BBC0045D580 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574FE5891E9D6BBC0045D580 /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		574FE57A1E9CB7AB0045D580 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		574FE57D1E9CB7AB0045D580 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		574FE57F1E9CB7AB0045D580 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		574FE5861E9D56B80045D580 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		574FE5891E9D6BBC0045D580 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 		574FE56F1E9CB7AB0045D580 /* SDSC-Wifire */ = {
 			isa = PBXGroup;
 			children = (
+				574FE5881E9D6B960045D580 /* View */,
+				574FE5851E9D56810045D580 /* Model */,
 				574FE5701E9CB7AB0045D580 /* AppDelegate.swift */,
 				574FE5721E9CB7AB0045D580 /* ViewController.swift */,
 				574FE5741E9CB7AB0045D580 /* Main.storyboard */,
@@ -65,6 +71,22 @@
 				574FE5771E9CB7AB0045D580 /* SDSC_Wifire.xcdatamodeld */,
 			);
 			path = "SDSC-Wifire";
+			sourceTree = "<group>";
+		};
+		574FE5851E9D56810045D580 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				574FE5861E9D56B80045D580 /* Post.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		574FE5881E9D6B960045D580 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				574FE5891E9D6BBC0045D580 /* PostCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +164,8 @@
 				574FE5791E9CB7AB0045D580 /* SDSC_Wifire.xcdatamodeld in Sources */,
 				574FE5731E9CB7AB0045D580 /* ViewController.swift in Sources */,
 				574FE5711E9CB7AB0045D580 /* AppDelegate.swift in Sources */,
+				574FE5871E9D56B80045D580 /* Post.swift in Sources */,
+				574FE58A1E9D6BBC0045D580 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
