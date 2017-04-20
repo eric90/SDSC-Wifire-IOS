@@ -12,55 +12,49 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var tableView: UITableView!
     
-    var posts = [Post]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         tableView.delegate = self
         tableView.dataSource = self
+        DataService.instance.loadPosts()
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.onPostsLoaded(_:)), name: NSNotification.Name(rawValue: "postsLoaded"), object: nil)
         
-        var post = Post(imagePath: "", title: "Post 1", desc: "post 1 desc")
-        var post2 = Post(imagePath: "", title: "Post 2", desc: "post 2 desc")
-        var post3 = Post(imagePath: "", title: "Post 3", desc: "post 3 desc")
-        
-        posts.append(post)
-        posts.append(post2)
-        posts.append(post3)
-        
-        tableView.reloadData()
-        
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
     }
-
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let post = posts[indexPath.row]
+        
+        let post = DataService.instance.loadedPosts[indexPath.row]
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
-            cell.configureCell(post: post)
+            cell.configureCell(post)
             return cell
         } else {
             let cell = PostCell()
-            cell.configureCell(post: post)
+            cell.configureCell(post)
             return cell
         }
         
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
         return 125.0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+        return DataService.instance.loadedPosts.count
     }
     
-    //select row to take you somewhere else.
-    //func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-    //    <#code#>
-    //}
+    func onPostsLoaded(_ notif: AnyObject) {
+        tableView.reloadData()
+    }
+    
+    
     
 
 }

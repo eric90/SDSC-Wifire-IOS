@@ -16,6 +16,7 @@
 		574FE5871E9D56B80045D580 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574FE5861E9D56B80045D580 /* Post.swift */; };
 		574FE58A1E9D6BBC0045D580 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574FE5891E9D6BBC0045D580 /* PostCell.swift */; };
 		574FE58E1EA829300045D580 /* AddPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574FE58D1EA829300045D580 /* AddPost.swift */; };
+		578606E21EA8490E00230210 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578606E11EA8490E00230210 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		574FE5861E9D56B80045D580 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		574FE5891E9D6BBC0045D580 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		574FE58D1EA829300045D580 /* AddPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPost.swift; sourceTree = "<group>"; };
+		578606E11EA8490E00230210 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +64,10 @@
 		574FE56F1E9CB7AB0045D580 /* SDSC-Wifire */ = {
 			isa = PBXGroup;
 			children = (
-				574FE58C1EA828BD0045D580 /* Controller */,
-				574FE5881E9D6B960045D580 /* View */,
+				578606E01EA848FB00230210 /* Services */,
 				574FE5851E9D56810045D580 /* Model */,
+				574FE5881E9D6B960045D580 /* View */,
+				574FE58C1EA828BD0045D580 /* Controller */,
 				574FE5701E9CB7AB0045D580 /* AppDelegate.swift */,
 				574FE57A1E9CB7AB0045D580 /* Assets.xcassets */,
 				574FE57F1E9CB7AB0045D580 /* Info.plist */,
@@ -100,6 +103,14 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		578606E01EA848FB00230210 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				578606E11EA8490E00230210 /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,6 +143,7 @@
 				TargetAttributes = {
 					574FE56C1E9CB7AB0045D580 = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = 543ZM3U8Q8;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -173,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				574FE5791E9CB7AB0045D580 /* SDSC_Wifire.xcdatamodeld in Sources */,
+				578606E21EA8490E00230210 /* DataService.swift in Sources */,
 				574FE5731E9CB7AB0045D580 /* ViewController.swift in Sources */,
 				574FE5711E9CB7AB0045D580 /* AppDelegate.swift in Sources */,
 				574FE5871E9D56B80045D580 /* Post.swift in Sources */,
@@ -302,9 +315,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 543ZM3U8Q8;
 				INFOPLIST_FILE = "SDSC-Wifire/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Faha.SDSC-Wifire";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -316,9 +329,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 543ZM3U8Q8;
 				INFOPLIST_FILE = "SDSC-Wifire/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Faha.SDSC-Wifire";
 				PRODUCT_NAME = "$(TARGET_NAME)";

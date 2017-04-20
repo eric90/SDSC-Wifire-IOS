@@ -19,18 +19,12 @@ class PostCell: UITableViewCell {
         
         postImage.layer.cornerRadius = 15.0
         postImage.clipsToBounds = true
-        // Initialization code
     }
-
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//
-//        // Configure the view for the selected state
-//    }
-
-    func configureCell(post: Post){
+    
+    func configureCell(_ post: Post) {
         titleLabel.text = post.title
-        DescLabel.text = post.postDescription
+        DescLabel.text = post.postDesc
+        postImage.image = DataService.instance.imageForPath(post.imagePath)
     }
     
 }

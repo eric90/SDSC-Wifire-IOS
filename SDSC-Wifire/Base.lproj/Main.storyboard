@@ -9,6 +9,14 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-LightItalic</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -183,11 +191,12 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xda-aP-qVo">
                                 <rect key="frame" x="67" y="107" width="240" height="240"/>
-                                <state key="normal" title="+ Add Pic" image="exampleImage">
-                                    <color key="titleColor" red="1" green="0.9150269821" blue="0.02502032304" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="+ Add Pic">
+                                    <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="addPicBtn:" destination="crg-C9-tOl" eventType="touchUpInside" id="8Yw-9W-qqp"/>
+                                    <action selector="addPicBtn:" destination="crg-C9-tOl" eventType="touchUpInside" id="h5R-b4-Xgl"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TOf-z2-Rha">
@@ -246,18 +255,17 @@
                     </view>
                     <connections>
                         <outlet property="descFld" destination="0p5-lH-t2w" id="Ifq-LA-aNs"/>
-                        <outlet property="postImg" destination="Xda-aP-qVo" id="wFU-WU-CfD"/>
+                        <outlet property="postImg" destination="8Po-nR-nLG" id="WE6-oe-jD9"/>
                         <outlet property="titleFld" destination="TOf-z2-Rha" id="ept-mx-aVR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qjo-XB-yql" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="904.79999999999995" y="136.28185907046478"/>
+            <point key="canvasLocation" x="1065" y="79"/>
         </scene>
     </scenes>
     <resources>
         <image name="camera" width="512" height="512"/>
-        <image name="exampleImage" width="580" height="300"/>
         <image name="logo" width="200" height="200"/>
     </resources>
 </document>
