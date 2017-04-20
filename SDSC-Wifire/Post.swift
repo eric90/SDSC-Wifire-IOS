@@ -9,6 +9,7 @@
 import Foundation
 
 class Post {
+    //private variables
     private var _imagePath: String!
     private var _title: String!
     private var _postDescription: String!
