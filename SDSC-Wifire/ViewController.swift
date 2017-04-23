@@ -12,6 +12,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var cameraBtn: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

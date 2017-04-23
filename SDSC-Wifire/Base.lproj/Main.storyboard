@@ -108,10 +108,22 @@
                                             <constraint firstAttribute="height" constant="54" id="f4P-5S-dPJ"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIj-7T-JIx">
+                                        <rect key="frame" x="8" y="17" width="40" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="6bd-t1-BPZ"/>
+                                            <constraint firstAttribute="width" constant="40" id="MhR-Yw-yQZ"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="aXh-TX-eKQ"/>
+                                            <constraint firstAttribute="height" constant="37" id="nzn-L3-9cV"/>
+                                        </constraints>
+                                        <state key="normal" image="camera"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="pGN-xr-cR8" secondAttribute="trailing" constant="8" id="377-Yu-pKE"/>
+                                    <constraint firstItem="UIj-7T-JIx" firstAttribute="leading" secondItem="TPM-CO-0xI" secondAttribute="leading" constant="8" id="I14-sK-dKm"/>
+                                    <constraint firstAttribute="bottom" secondItem="UIj-7T-JIx" secondAttribute="bottom" constant="8" id="IHG-RU-bEB"/>
                                     <constraint firstAttribute="bottom" secondItem="8py-3c-lp9" secondAttribute="bottom" id="KNV-tH-sdo"/>
                                     <constraint firstAttribute="height" constant="62" id="YJ3-LR-XzM"/>
                                     <constraint firstItem="8py-3c-lp9" firstAttribute="centerX" secondItem="TPM-CO-0xI" secondAttribute="centerX" id="eUJ-Zn-SZ1"/>
@@ -131,6 +143,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cameraBtn" destination="UIj-7T-JIx" id="d6Q-NH-fOp"/>
                         <outlet property="tableView" destination="IeF-mu-SOT" id="psz-sR-hLG"/>
                     </connections>
                 </viewController>
@@ -256,6 +269,7 @@
                     <connections>
                         <outlet property="descFld" destination="0p5-lH-t2w" id="Ifq-LA-aNs"/>
                         <outlet property="postImg" destination="8Po-nR-nLG" id="WE6-oe-jD9"/>
+                        <outlet property="postItBtn" destination="2dJ-Wt-9Qp" id="frd-Bk-mNe"/>
                         <outlet property="titleFld" destination="TOf-z2-Rha" id="ept-mx-aVR"/>
                     </connections>
                 </viewController>
