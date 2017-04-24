@@ -83,10 +83,4 @@ class AddPost: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
         postImg.image = image
     }
     
-
-
-    
-
-    
-
 }

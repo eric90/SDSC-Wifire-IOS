@@ -8,17 +8,21 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var cameraBtn: UIButton!
     
+    var imagePicker: UIImagePickerController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        
         DataService.instance.loadPosts()
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.onPostsLoaded(_:)), name: NSNotification.Name(rawValue: "postsLoaded"), object: nil)
         
@@ -56,6 +60,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.reloadData()
     }
     
+    @IBAction func tapOnCamera(_ sender: UIButton!) {
+        imagePicker.sourceType = .camera
+        sender.setTitle("", for: .normal)
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        imagePicker.dismiss(animated: true, completion: nil)
+    
+        
+        let imgPath = DataService.instance.saveImageAndCreatePath(image)
+//        
+        //let post = Post(imagePath: image)
+//        DataService.instance.addPost(post)
+    
+    }
     
     
 
