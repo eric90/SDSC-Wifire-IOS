@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import CoreLocation
+import MapKit
 
-class AddPost: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AddPost: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var titleFld: UITextField!
     @IBOutlet weak var descFld: UITextField!
@@ -20,6 +22,7 @@ class AddPost: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
     
     var imagePicker: UIImagePickerController!
     
+    let locationManger = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,17 @@ class AddPost: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
         
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
+        
+        //for location
+        self.locationManger.requestAlwaysAuthorization()
+        self.locationManger.requestWhenInUseAuthorization()
+        
+        //if location is enabled
+        if CLLocationManager.locationServicesEnabled() {
+            locationManger.delegate = self
+            locationManger.desiredAccuracy = kCLLocationAccuracyBest
+            locationManger.startUpdatingLocation()
+        }
         
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
@@ -81,6 +95,18 @@ class AddPost: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         imagePicker.dismiss(animated: true, completion: nil)
         postImg.image = image
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        var userLocation:CLLocation = locations[0] as! CLLocation
+        manager.startUpdatingLocation()
+        
+        let coordinations = CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
+        //or i can have seprate 
+    //    let long = userLocation.coordinate.longitude
+      //  let lat = userLocation.coordinate.latitude
+    
+        
     }
     
 }

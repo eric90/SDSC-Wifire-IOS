@@ -190,6 +190,14 @@
                                             <action selector="backBtnPressed:" destination="crg-C9-tOl" eventType="touchUpInside" id="1VD-eu-kV0"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sp2-DV-TtS">
+                                        <rect key="frame" x="321" y="32" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Map"/>
+                                        <connections>
+                                            <segue destination="U2o-x9-uyT" kind="show" id="Pih-vH-CYJ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -279,6 +287,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qjo-XB-yql" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1065" y="79"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="XQD-lA-Oue">
+            <objects>
+                <viewController id="U2o-x9-uyT" customClass="MapViewController" customModule="SDSC_Wifire" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N7D-Mj-9sY"/>
+                        <viewControllerLayoutGuide type="bottom" id="FFc-tm-43p"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PLT-nZ-IOE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sZf-VC-9i1">
+                                <rect key="frame" x="0.0" y="55" width="375" height="612"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtp-20-mdv">
+                                <rect key="frame" x="16" y="20" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9W6-8B-X9F"/>
+                                    <constraint firstAttribute="width" constant="46" id="j70-Ul-nQ1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backBtn:" destination="U2o-x9-uyT" eventType="touchUpInside" id="gCg-w8-b4I"/>
+                                    <action selector="backBtnPressed:" destination="crg-C9-tOl" eventType="touchUpInside" id="e3F-3u-094"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jtp-20-mdv" firstAttribute="leading" secondItem="PLT-nZ-IOE" secondAttribute="leadingMargin" id="8Re-qP-IfP"/>
+                            <constraint firstItem="sZf-VC-9i1" firstAttribute="top" secondItem="N7D-Mj-9sY" secondAttribute="bottom" constant="35" id="Ane-DS-JsI"/>
+                            <constraint firstItem="sZf-VC-9i1" firstAttribute="top" secondItem="Jtp-20-mdv" secondAttribute="bottom" constant="5" id="D0D-Mm-YeO"/>
+                            <constraint firstItem="FFc-tm-43p" firstAttribute="top" secondItem="sZf-VC-9i1" secondAttribute="bottom" id="M8w-m4-uFv"/>
+                            <constraint firstAttribute="trailing" secondItem="sZf-VC-9i1" secondAttribute="trailing" id="XFZ-bS-Zj2"/>
+                            <constraint firstItem="sZf-VC-9i1" firstAttribute="leading" secondItem="PLT-nZ-IOE" secondAttribute="leading" id="ehG-w5-SUk"/>
+                            <constraint firstItem="Jtp-20-mdv" firstAttribute="top" secondItem="N7D-Mj-9sY" secondAttribute="bottom" id="kHF-4x-57V"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="sZf-VC-9i1" id="MeJ-dw-BGs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NoZ-QC-phx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1877.5999999999999" y="75.112443778110944"/>
         </scene>
     </scenes>
     <resources>
