@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class AddPost: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate {
+class AddPost: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var titleFld: UITextField!
     @IBOutlet weak var descFld: UITextField!
@@ -19,10 +19,14 @@ class AddPost: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
     
     @IBOutlet weak var postItBtn: UIButton!
     
+    @IBOutlet weak var map: MKMapView!
     
     var imagePicker: UIImagePickerController!
     
     let locationManger = CLLocationManager()
+    
+    
+    let reagionRadius:CLLocationDistance = 1000
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +37,9 @@ class AddPost: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
         
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
+        
+        map.delegate = self
+        map.showsUserLocation = true
         
         //for location
         self.locationManger.requestAlwaysAuthorization()
@@ -56,6 +63,11 @@ class AddPost: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        locationAuthStatus()
+    }
+    
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
@@ -107,6 +119,26 @@ class AddPost: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
       //  let lat = userLocation.coordinate.latitude
     
         
+    }
+    
+    func locationAuthStatus() {
+        //while user is using the app.
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            map.showsUserLocation = true
+        } else {
+            locationManger.requestWhenInUseAuthorization()
+        }
+    }
+    
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, reagionRadius * 2, reagionRadius * 2)
+        map.setRegion(coordinateRegion, animated: true)
+    }
+    
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        if let loc = userLocation.location {
+            centerMapOnLocation(location: loc)
+        }
     }
     
 }

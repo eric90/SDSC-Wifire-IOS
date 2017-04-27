@@ -207,14 +207,14 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Po-nR-nLG">
-                                <rect key="frame" x="67" y="107" width="240" height="240"/>
+                                <rect key="frame" x="87" y="70" width="200" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="Twd-lM-a4i"/>
-                                    <constraint firstAttribute="width" constant="240" id="xlI-Yl-gcE"/>
+                                    <constraint firstAttribute="width" constant="200" id="bKi-ke-eyG"/>
+                                    <constraint firstAttribute="height" constant="150" id="zL4-7Z-SVl"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xda-aP-qVo">
-                                <rect key="frame" x="67" y="107" width="240" height="240"/>
+                                <rect key="frame" x="87" y="70" width="200" height="150"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="+ Add Pic">
                                     <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -224,29 +224,25 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TOf-z2-Rha">
-                                <rect key="frame" x="67" y="390" width="240" height="30"/>
+                                <rect key="frame" x="87" y="248" width="94" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="grf-w4-XOc"/>
+                                    <constraint firstAttribute="width" constant="94" id="WpK-FX-byi"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0p5-lH-t2w">
-                                <rect key="frame" x="67" y="450" width="240" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="4gC-up-cTd"/>
-                                </constraints>
+                                <rect key="frame" x="211" y="248" width="94" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dJ-Wt-9Qp">
-                                <rect key="frame" x="120" y="510" width="134" height="30"/>
+                                <rect key="frame" x="120" y="318" width="134" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="134" id="B2M-Tv-2d8"/>
-                                    <constraint firstAttribute="height" constant="30" id="bIL-mf-vK0"/>
+                                    <constraint firstAttribute="width" constant="134" id="S27-ko-Dw9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -255,30 +251,37 @@
                                     <action selector="makePostBtnPressed:" destination="crg-C9-tOl" eventType="touchUpInside" id="sbP-Ot-5hX"/>
                                 </connections>
                             </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Fca-ce-wrh">
+                                <rect key="frame" x="0.0" y="369" width="375" height="298"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="0p5-lH-t2w" secondAttribute="trailing" constant="52" id="2qd-MQ-YR8"/>
+                            <constraint firstItem="2dJ-Wt-9Qp" firstAttribute="centerX" secondItem="Xda-aP-qVo" secondAttribute="centerX" id="0pT-O4-KeW"/>
+                            <constraint firstItem="TOf-z2-Rha" firstAttribute="top" secondItem="Xda-aP-qVo" secondAttribute="bottom" constant="28" id="1kq-Xw-T9h"/>
+                            <constraint firstItem="Fca-ce-wrh" firstAttribute="leading" secondItem="qB0-Rn-reK" secondAttribute="leading" id="2m8-F4-aHH"/>
+                            <constraint firstItem="Xda-aP-qVo" firstAttribute="centerY" secondItem="8Po-nR-nLG" secondAttribute="centerY" id="6s9-jM-cCC"/>
                             <constraint firstAttribute="trailing" secondItem="qB0-Rn-reK" secondAttribute="trailing" id="79c-KO-N6p"/>
-                            <constraint firstItem="2dJ-Wt-9Qp" firstAttribute="centerX" secondItem="Z5a-1S-I4t" secondAttribute="centerX" id="BqZ-SX-P3e"/>
-                            <constraint firstItem="8Po-nR-nLG" firstAttribute="centerX" secondItem="Z5a-1S-I4t" secondAttribute="centerX" id="EZ7-16-ZOa"/>
+                            <constraint firstItem="Xda-aP-qVo" firstAttribute="height" secondItem="8Po-nR-nLG" secondAttribute="height" id="FRH-hb-X4B"/>
                             <constraint firstItem="qB0-Rn-reK" firstAttribute="top" secondItem="Z5a-1S-I4t" secondAttribute="top" id="FcL-yg-ztJ"/>
-                            <constraint firstItem="0p5-lH-t2w" firstAttribute="top" secondItem="TOf-z2-Rha" secondAttribute="bottom" constant="30" id="G1B-hH-mOE"/>
-                            <constraint firstItem="8Po-nR-nLG" firstAttribute="top" secondItem="qB0-Rn-reK" secondAttribute="bottom" constant="45" id="HoK-Q2-XP1"/>
-                            <constraint firstItem="TOf-z2-Rha" firstAttribute="leading" secondItem="Z5a-1S-I4t" secondAttribute="leadingMargin" constant="51" id="K7w-I8-EZv"/>
-                            <constraint firstItem="0p5-lH-t2w" firstAttribute="leading" secondItem="Z5a-1S-I4t" secondAttribute="leadingMargin" constant="51" id="KY1-BA-WFZ"/>
-                            <constraint firstItem="Xda-aP-qVo" firstAttribute="width" secondItem="8Po-nR-nLG" secondAttribute="width" id="TE3-Y3-KAe"/>
-                            <constraint firstItem="Xda-aP-qVo" firstAttribute="height" secondItem="8Po-nR-nLG" secondAttribute="height" id="YXo-RN-48D"/>
-                            <constraint firstItem="TOf-z2-Rha" firstAttribute="top" secondItem="Xda-aP-qVo" secondAttribute="bottom" constant="43" id="Z9A-Va-LNR"/>
-                            <constraint firstItem="Xda-aP-qVo" firstAttribute="centerY" secondItem="8Po-nR-nLG" secondAttribute="centerY" id="dcY-kZ-6Qu"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="TOf-z2-Rha" secondAttribute="trailing" constant="52" id="jLj-jC-HNa"/>
-                            <constraint firstItem="2dJ-Wt-9Qp" firstAttribute="top" secondItem="0p5-lH-t2w" secondAttribute="bottom" constant="30" id="kJX-4f-t6g"/>
+                            <constraint firstItem="Fca-ce-wrh" firstAttribute="bottom" secondItem="VoD-eR-xta" secondAttribute="top" id="Jgn-p4-jUd"/>
+                            <constraint firstItem="Fca-ce-wrh" firstAttribute="trailing" secondItem="qB0-Rn-reK" secondAttribute="trailing" id="Pp0-Lk-mne"/>
+                            <constraint firstItem="TOf-z2-Rha" firstAttribute="leading" secondItem="Xda-aP-qVo" secondAttribute="leading" id="RCF-bE-5nQ"/>
+                            <constraint firstItem="Xda-aP-qVo" firstAttribute="centerX" secondItem="8Po-nR-nLG" secondAttribute="centerX" id="YGj-Nc-Paq"/>
+                            <constraint firstItem="0p5-lH-t2w" firstAttribute="leading" secondItem="TOf-z2-Rha" secondAttribute="trailing" constant="30" id="bXY-sf-23P"/>
+                            <constraint firstItem="2dJ-Wt-9Qp" firstAttribute="centerY" secondItem="Z5a-1S-I4t" secondAttribute="centerY" id="bgO-Ea-MMo"/>
+                            <constraint firstItem="Xda-aP-qVo" firstAttribute="width" secondItem="8Po-nR-nLG" secondAttribute="width" id="hr2-kb-qTP"/>
+                            <constraint firstItem="TOf-z2-Rha" firstAttribute="baseline" secondItem="0p5-lH-t2w" secondAttribute="baseline" id="jGx-YD-7eI"/>
+                            <constraint firstItem="VoD-eR-xta" firstAttribute="top" secondItem="2dJ-Wt-9Qp" secondAttribute="bottom" constant="319" id="mYx-Sc-pVW"/>
+                            <constraint firstItem="Fca-ce-wrh" firstAttribute="top" secondItem="2dJ-Wt-9Qp" secondAttribute="bottom" constant="21" id="n1R-h8-DP3"/>
+                            <constraint firstItem="8Po-nR-nLG" firstAttribute="top" secondItem="qB0-Rn-reK" secondAttribute="bottom" constant="8" id="nIN-5b-gA1"/>
+                            <constraint firstItem="8Po-nR-nLG" firstAttribute="centerX" secondItem="Z5a-1S-I4t" secondAttribute="centerX" id="qwx-nc-xLz"/>
                             <constraint firstItem="qB0-Rn-reK" firstAttribute="leading" secondItem="Z5a-1S-I4t" secondAttribute="leading" id="uC6-ep-fi3"/>
-                            <constraint firstItem="Xda-aP-qVo" firstAttribute="centerX" secondItem="8Po-nR-nLG" secondAttribute="centerX" id="zpC-ee-4Bt"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="descFld" destination="0p5-lH-t2w" id="Ifq-LA-aNs"/>
+                        <outlet property="map" destination="Fca-ce-wrh" id="NxW-9N-Owk"/>
                         <outlet property="postImg" destination="8Po-nR-nLG" id="WE6-oe-jD9"/>
                         <outlet property="postItBtn" destination="2dJ-Wt-9Qp" id="frd-Bk-mNe"/>
                         <outlet property="titleFld" destination="TOf-z2-Rha" id="ept-mx-aVR"/>
@@ -286,7 +289,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qjo-XB-yql" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1065" y="79"/>
+            <point key="canvasLocation" x="1064.8" y="78.710644677661179"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="XQD-lA-Oue">
