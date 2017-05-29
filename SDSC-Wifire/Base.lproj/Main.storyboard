@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -41,13 +41,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="125"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="crv-6X-jah">
-                                                    <rect key="frame" x="8" y="12" width="100" height="100"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="DxF-q4-Z97"/>
-                                                        <constraint firstAttribute="height" constant="100" id="HfQ-Gg-s0j"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Fire Fire Fire" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hc0-qC-sID">
                                                     <rect key="frame" x="116" y="12" width="219" height="21"/>
                                                     <constraints>
@@ -66,6 +59,13 @@
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="crv-6X-jah">
+                                                    <rect key="frame" x="8" y="12" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="DxF-q4-Z97"/>
+                                                        <constraint firstAttribute="height" constant="100" id="HfQ-Gg-s0j"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="crv-6X-jah" firstAttribute="top" secondItem="LFK-rt-nBc" secondAttribute="topMargin" constant="4" id="4iH-Uc-wNd"/>
@@ -96,7 +96,7 @@
                                             <constraint firstAttribute="width" constant="40" id="ScN-Pv-8Ee"/>
                                             <constraint firstAttribute="height" constant="37" id="zK3-U8-2mx"/>
                                         </constraints>
-                                        <state key="normal" image="camera"/>
+                                        <state key="normal" image="mapCamera"/>
                                         <connections>
                                             <segue destination="crg-C9-tOl" kind="show" identifier="AddPost" id="7cu-Rf-u3y"/>
                                         </connections>
@@ -116,7 +116,7 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="aXh-TX-eKQ"/>
                                             <constraint firstAttribute="height" constant="37" id="nzn-L3-9cV"/>
                                         </constraints>
-                                        <state key="normal" image="camera"/>
+                                        <state key="normal" image="setting1"/>
                                         <connections>
                                             <action selector="tapOnCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xmd-aU-bPH"/>
                                         </connections>
@@ -153,6 +153,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="137.18140929535232"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="i6S-vb-StB">
+            <objects>
+                <viewController storyboardIdentifier="mystoryboard" id="wtK-8d-wFK" customClass="ImageViewController" customModule="SDSC_Wifire" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xbv-SF-E56"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qh1-yr-yMq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f5w-ef-ClO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1h-98-C5O">
+                                <rect key="frame" x="120" y="28" width="135" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="Ywp-mV-4QT"/>
+                                    <constraint firstAttribute="height" constant="30" id="cyj-Fw-9Wo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="w1h-98-C5O" firstAttribute="centerX" secondItem="f5w-ef-ClO" secondAttribute="centerX" id="rS0-he-3kD"/>
+                            <constraint firstItem="w1h-98-C5O" firstAttribute="top" secondItem="xbv-SF-E56" secondAttribute="bottom" constant="8" id="ukc-m0-f9d"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s6p-ab-kFi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="-593.25337331334333"/>
         </scene>
         <!--Add Post-->
         <scene sceneID="F1S-ew-4ya">
@@ -345,5 +379,7 @@
     <resources>
         <image name="camera" width="512" height="512"/>
         <image name="logo" width="200" height="200"/>
+        <image name="mapCamera" width="512" height="512"/>
+        <image name="setting1" width="512" height="512"/>
     </resources>
 </document>

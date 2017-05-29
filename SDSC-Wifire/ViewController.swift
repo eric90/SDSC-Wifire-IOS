@@ -32,6 +32,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+//    
+//    var globalVar: Int = 0
+//
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let selectedIndex = self.tableView.indexPath(for: sender as! UITableViewCell)
+//        globalVar = selectedIndex!.row
+//        print("tableView prepareForSegue: " + String(globalVar))
+//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -52,6 +60,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return 125.0
     }
     
+    //Detect which row are you tapping on the tableviewcell
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let row = indexPath.row
+        print("Row: \(row)")
+        
+        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "mystoryboard") as! ImageViewController
+        
+        self.navigationController?.pushViewController(secondViewController, animated: true)
+        
+        //print(meetingArray[row] as! String)
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DataService.instance.loadedPosts.count
     }
@@ -60,11 +83,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.reloadData()
     }
     
+    //------------------------newstuff
+    func Tapped() {
+        let myPickerController = UIImagePickerController()
+        
+        myPickerController.delegate = self
+        myPickerController.sourceType = UIImagePickerControllerSourceType.camera
+        myPickerController.allowsEditing = false
+        self.present(myPickerController, animated: true, completion: nil)
+    }
+    //------------------------newstuffdone
+    
+    //this func is commented out, this is for the camera in the 
+    //main page
     @IBAction func tapOnCamera(_ sender: UIButton!) {
         imagePicker.sourceType = .camera
         sender.setTitle("", for: .normal)
         present(imagePicker, animated: true, completion: nil)
     }
+    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         imagePicker.dismiss(animated: true, completion: nil)
@@ -76,6 +113,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //        DataService.instance.addPost(post)
     
     }
+    
+    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        // Get the new view controller using segue.destinationViewController.
+//        // Pass the selected object to the new view controller.
+//        let selectedIndex = self.tableView.indexPath(for: sender as! UITableViewCell)
+//        globalVar = selectedIndex!.row
+//        print("tableView prepareForSegue: " + String(globalVar))
+//        
+//    }
     
     
 
