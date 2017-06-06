@@ -4,7 +4,9 @@
 //
 //  Created by Eric Fakhourian on 4/25/17.
 //  Copyright © 2017 Eric Fakhourian. All rights reserved.
-//
+//  
+//  This is extra map view controller if you want to open just the map from the taking picture page and see the 
+// big picture of the location of you. 
 
 import UIKit
 import MapKit

@@ -14,11 +14,14 @@ class AddPost: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
 
     @IBOutlet weak var titleFld: UITextField!
     @IBOutlet weak var descFld: UITextField!
-
+    
+    //Just the image that you take form camera
     @IBOutlet weak var postImg: UIImageView!
     
+    //Btn outlet to post the pic
     @IBOutlet weak var postItBtn: UIButton!
     
+    //Map view outlet
     @IBOutlet weak var map: MKMapView!
     
     var imagePicker: UIImagePickerController!
@@ -94,9 +97,9 @@ class AddPost: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
         }
     }
     
+    //back btn that goes back to first viewController
     @IBAction func backBtnPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
-        
     }
     
 //    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {

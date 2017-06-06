@@ -15,8 +15,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
             endingLineNumber = "29"
-            landmarkName = "PostCell"
-            landmarkType = "3">
+            landmarkName = "configureCell(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -33,6 +33,115 @@
             endingLineNumber = "54"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDSC-Wifire/SettingViewController.swift"
+            timestampString = "518460951.1596"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "SettingViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SDSC_Wifire.SettingViewController.__deallocating_deinit"
+                  moduleName = "SDSC-Wifire"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericfa/Documents/IOS/SDSC-Wifire/SDSC-Wifire/SettingViewController.swift"
+                  timestampString = "518460951.94645"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SDSC_Wifire.SettingViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; SDSC_Wifire.SettingViewController"
+                  moduleName = "SDSC-Wifire"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericfa/Documents/IOS/SDSC-Wifire/SDSC-Wifire/SettingViewController.swift"
+                  timestampString = "518460951.949972"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SDSC_Wifire.SettingViewController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; SDSC_Wifire.SettingViewController"
+                  moduleName = "SDSC-Wifire"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericfa/Documents/IOS/SDSC-Wifire/SDSC-Wifire/SettingViewController.swift"
+                  timestampString = "518460951.951839"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SDSC_Wifire.SettingViewController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;SDSC_Wifire.SettingViewController&gt;"
+                  moduleName = "SDSC-Wifire"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericfa/Documents/IOS/SDSC-Wifire/SDSC-Wifire/SettingViewController.swift"
+                  timestampString = "518460951.953469"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SDSC_Wifire.SettingViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;SDSC_Wifire.SettingViewController&gt;"
+                  moduleName = "SDSC-Wifire"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericfa/Documents/IOS/SDSC-Wifire/SDSC-Wifire/SettingViewController.swift"
+                  timestampString = "518460951.955748"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "124">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDSC-Wifire/ViewController.swift"
+            timestampString = "518464602.776425"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "ViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

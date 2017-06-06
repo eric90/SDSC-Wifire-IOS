@@ -19,6 +19,8 @@
 		578606E21EA8490E00230210 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578606E11EA8490E00230210 /* DataService.swift */; };
 		57FB00C31EDCAD8D00A60EAF /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FB00C21EDCAD8D00A60EAF /* ImageViewController.swift */; };
 		57FB45731EAFD230002A7FD9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FB45721EAFD230002A7FD9 /* MapViewController.swift */; };
+		57FBD95A1EE70DFF006940F1 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FBD9591EE70DFF006940F1 /* SettingViewController.swift */; };
+		57FBD95C1EE72575006940F1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FBD95B1EE72575006940F1 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		578606E11EA8490E00230210 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		57FB00C21EDCAD8D00A60EAF /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		57FB45721EAFD230002A7FD9 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		57FBD9591EE70DFF006940F1 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		57FBD95B1EE72575006940F1 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 				574FE58D1EA829300045D580 /* AddPost.swift */,
 				57FB45721EAFD230002A7FD9 /* MapViewController.swift */,
 				57FB00C21EDCAD8D00A60EAF /* ImageViewController.swift */,
+				57FBD9591EE70DFF006940F1 /* SettingViewController.swift */,
+				57FBD95B1EE72575006940F1 /* SettingsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -192,9 +198,11 @@
 			files = (
 				574FE5791E9CB7AB0045D580 /* SDSC_Wifire.xcdatamodeld in Sources */,
 				57FB00C31EDCAD8D00A60EAF /* ImageViewController.swift in Sources */,
+				57FBD95C1EE72575006940F1 /* SettingsViewController.swift in Sources */,
 				578606E21EA8490E00230210 /* DataService.swift in Sources */,
 				574FE5731E9CB7AB0045D580 /* ViewController.swift in Sources */,
 				574FE5711E9CB7AB0045D580 /* AppDelegate.swift in Sources */,
+				57FBD95A1EE70DFF006940F1 /* SettingViewController.swift in Sources */,
 				574FE5871E9D56B80045D580 /* Post.swift in Sources */,
 				574FE58A1E9D6BBC0045D580 /* PostCell.swift in Sources */,
 				574FE58E1EA829300045D580 /* AddPost.swift in Sources */,

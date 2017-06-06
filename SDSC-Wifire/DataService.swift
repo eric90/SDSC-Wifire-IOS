@@ -5,7 +5,8 @@
 //  Created by Eric Fakhourian on 4/19/17.
 //  Copyright © 2017 Eric Fakhourian. All rights reserved.
 //
-
+//This class is for the pictures that app is saving all the images in the aplication
+//and it wont remove when you close the application. 
 import Foundation
 import UIKit
 

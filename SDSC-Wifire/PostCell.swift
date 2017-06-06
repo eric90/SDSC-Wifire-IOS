@@ -5,6 +5,9 @@
 //  Created by Eric Fakhourian on 4/11/17.
 //  Copyright © 2017 Eric Fakhourian. All rights reserved.
 //
+// This is the cell in the tableview
+// Cells that you see the list of the images. 
+// Each cell has this methods and constraints.
 
 import UIKit
 

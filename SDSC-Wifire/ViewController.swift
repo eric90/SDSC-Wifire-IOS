@@ -8,6 +8,7 @@
 
 import UIKit
 
+//Main view controller
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
@@ -82,7 +83,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func onPostsLoaded(_ notif: AnyObject) {
         tableView.reloadData()
     }
-    
+    /*
     //------------------------newstuff
     func Tapped() {
         let myPickerController = UIImagePickerController()
@@ -92,15 +93,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         myPickerController.allowsEditing = false
         self.present(myPickerController, animated: true, completion: nil)
     }
+    */
     //------------------------newstuffdone
     
     //this func is commented out, this is for the camera in the 
     //main page
-    @IBAction func tapOnCamera(_ sender: UIButton!) {
-        imagePicker.sourceType = .camera
-        sender.setTitle("", for: .normal)
-        present(imagePicker, animated: true, completion: nil)
-    }
+//    @IBAction func tapOnCamera(_ sender: UIButton!) {
+//        imagePicker.sourceType = .camera
+//        sender.setTitle("", for: .normal)
+//        present(imagePicker, animated: true, completion: nil)
+//    }
     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
@@ -115,16 +117,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        // Get the new view controller using segue.destinationViewController.
-//        // Pass the selected object to the new view controller.
-//        let selectedIndex = self.tableView.indexPath(for: sender as! UITableViewCell)
-//        globalVar = selectedIndex!.row
-//        print("tableView prepareForSegue: " + String(globalVar))
+//    func saveImageWithImageData(data: NSData, properties: NSDictionary, completion: (_ data: NSData, _ path: NSURL) -> Void) {
+//        
+//        let imageRef: CGImageSourceRef = CGImageSourceCreateWithData((data as CFDataRef), nil)!
+//        let uti: CFString = CGImageSourceGetType(imageRef)!
+//        let dataWithEXIF: NSMutableData = NSMutableData(data: data as Data)
+//        let destination: CGImageDestinationRef = CGImageDestinationCreateWithData((dataWithEXIF as CFMutableDataRef), uti, 1, nil)!
+//        
+//        CGImageDestinationAddImageFromSource(destination, imageRef, 0, (properties as CFDictionaryRef))
+//        CGImageDestinationFinalize(destination)
+//        
+//        var paths: [AnyObject] = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as [AnyObject]
+//        let savePath: String = paths[0].appendingPathComponent("exif.jpg")
+//        
+//        let manager: FileManager = FileManager.default
+//        manager.createFile(atPath: savePath, contents: dataWithEXIF as Data, attributes: nil)
+//        
+//        completion(dataWithEXIF,NSURL(string: savePath)!)
+//        
+//        print("image with EXIF info converting to NSData: Done! Ready to upload! ")
 //        
 //    }
-    
-    
 
 }
 
